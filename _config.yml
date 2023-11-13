@@ -24,7 +24,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://barrymister.com" # the base hostname & protocol for your site
 
 # Build settings
-theme: jekyll-theme-leap-day
+theme: minima
 markdown: kramdown
 
 # Exclude from processing.
