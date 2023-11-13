@@ -13,6 +13,6 @@ Of course, I am leveraging ChatGPT.
 
 Looking forward to see what I can really do with this.
 
-How creating can I get?
+How creative can I get?
 
 Feels like there is no limit.
