@@ -7,7 +7,7 @@ categories: jekyll update
 
 I put together a subdomain for my resume.
 
-Work in progress but it is here https://resume.barrymister.com/
+Work in progress but here's my [resume](https://resume.barrymister.com/).
 
 Also, had a breakthrough on soemthing very challenging today.
 
