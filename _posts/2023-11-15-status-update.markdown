@@ -5,13 +5,15 @@ date:   2023-11-15 08:17:14 +0200
 categories: jekyll update
 ---
 
-I put together a subdomain for my resume.
+I put together a subdomain for my <a href="https://resume.barrymister.com/" target="_blank">resume</a>.
 
-Work in progress but here's my <a href="https://resume.barrymister.com/" target="_blank">resume</a>.
+It's a work in progress.
 
 Also, had a breakthrough on soemthing very challenging today.
 
 Something I've been working very hard on and didn't know if I could figure it out.
+
+But I did.
 
 Feels good.
 
