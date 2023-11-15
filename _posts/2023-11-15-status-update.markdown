@@ -17,6 +17,10 @@ Feels good.
 
 I haven't been able to dedicate any time to my other ventures.
 
-Still trying to develop my business [Data Craftworks, LLC](https://datacraftworks.com/)
+Still trying to develop my business [Data Craftworks, LLC](https://datacraftworks.com/).
 
+Trying to shore up the necessary administrative functions of both the LLC and the S corp I'm forming.
 
+It's a lot. So much red tape and procedural work that has to be done to build a legit business.
+
+But, I am loving it.
