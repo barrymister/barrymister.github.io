@@ -7,7 +7,7 @@ categories: jekyll update
 
 I put together a subdomain for my resume.
 
-Work in progress but here's my [resume](https://resume.barrymister.com/).
+Work in progress but here's my <a href="https://resume.barrymister.com/" target="_blank">resume</a>.
 
 Also, had a breakthrough on soemthing very challenging today.
 
@@ -17,7 +17,7 @@ Feels good.
 
 I haven't been able to dedicate any time to my other ventures.
 
-Still trying to develop my business [Data Craftworks, LLC](https://datacraftworks.com/).
+Still trying to develop my business <a href="https://datacraftworks.com/" target="_blank">Data Craftworks, LLC</a>.
 
 Trying to shore up the necessary administrative functions of both the LLC and the S corp I'm forming.
 
