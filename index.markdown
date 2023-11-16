@@ -27,23 +27,26 @@ Hello, I'm Barry Mister. This is my personal space on the web where I'll be shar
     var responseArea = document.getElementById('chatOutput');
 
     try {
-      let response = await fetch('https://api.openai.com/v1/engines/davinci/completions', {
+      // Replace 'username' and 'repository' with your GitHub username and repo
+      let response = await fetch('https://api.github.com/repos/barrymister/barrymister.github.io/dispatches', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer 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'
+          Accept: 'application/vnd.github.v3+json',
+          // The token here is for GitHub, not OpenAI. But remember, embedding this in frontend code is not secure.
+          Authorization: 'token YOUR_GITHUB_TOKEN',
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          prompt: userInput,
-          max_tokens: 150
+          event_type: 'openai-query',
+          client_payload: { prompt: userInput }
         })
       });
 
-      let data = await response.json();
-      responseArea.innerHTML = data.choices[0].text;
+      // Handle the response...
     } catch (error) {
       console.error('Error:', error);
       responseArea.innerHTML = 'Error in processing your message.';
     }
   }
 </script>
+
