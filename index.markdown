@@ -31,7 +31,7 @@ Hello, I'm Barry Mister. This is my personal space on the web where I'll be shar
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer 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'
+          'Authorization': 'Bearer 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'
         },
         body: JSON.stringify({
           prompt: userInput,
