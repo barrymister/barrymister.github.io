@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "It's Been Awhile"
+date:   2024-08-31 04:06:14 +0200
+categories: jekyll update
+---
+
 Well life gets busy and I haven't really had time to even touch my blog/site.
 
 Working on a few new interests both personally and professionally.
