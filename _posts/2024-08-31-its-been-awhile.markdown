@@ -11,7 +11,7 @@ Working on a few new interests both personally and professionally.
 
 I passed the HAM Technician License Exam on July 1st and was in the FCC database on the 6th.
 
-So I am a license amateur radio operator.
+So I am a licensed amateur radio operator.
 
 Call sign KQ4TNV.
 
