@@ -1,0 +1,12 @@
+Well life gets busy and I haven't really had time to even touch my blog/site.
+
+Working on a few new interests both personally and professionally.
+
+I passed the HAM Technician License Exam on July 1st and was in the FCC database on the 6th.
+
+So I am a license amateur radio operator.
+
+Call sign KQ4TNV.
+
+At this very moment, although sidetracked with this update, I am working on cutomizing my XLX Reflector web page <a href="https://xlx556.kq4tnv.net/" target="_blank">XLX556 Multiprotocl Reflector in Stafford Virginia</a>
+
