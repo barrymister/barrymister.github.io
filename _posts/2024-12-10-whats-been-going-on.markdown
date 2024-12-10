@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Busy with Amateur Radio and Beyond"
+date: 2024-12-10 12:00:00 -0500
 categories: [radio, hobbies, personal]
 ---
 
