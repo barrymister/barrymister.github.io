@@ -10,5 +10,5 @@ title: Home
 
 Hello, I'm Barry Mister. This is my personal space on the web where I'll be sharing content and ideas that I find interesting and engaging. Stay tuned for updates!
 
-# Your existing content...
+# My content...
 
