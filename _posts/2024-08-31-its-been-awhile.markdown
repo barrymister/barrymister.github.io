@@ -15,5 +15,5 @@ So I am a licensed amateur radio operator.
 
 Call sign KQ4TNV.
 
-At this very moment, although sidetracked with this update, I am working on cutomizing my XLX Reflector web page <a href="https://xlx556.kq4tnv.net/" target="_blank">XLX556 Multiprotocl Reflector in Stafford Virginia</a>
+At this very moment, although sidetracked with this update, I am working on cutomizing my XLX Reflector web page <a href="https://xlx556.kq4tnv.net/" target="_blank">XLX556 Multiprotocol Reflector in Stafford Virginia</a>
 
