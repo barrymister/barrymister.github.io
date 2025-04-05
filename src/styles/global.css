@@ -12,7 +12,6 @@
   }
 
   body {
-    @apply bg-[var(--background-color)] text-[var(--text-color)];
     font-family: 'Libre Franklin', sans-serif;
   }
 
@@ -23,36 +22,36 @@
 
 @layer components {
   .article-card {
-    @apply p-6 border border-[var(--secondary-color)] rounded-lg;
+    @apply p-6 border border-var-secondary rounded-lg;
   }
 
   .button {
-    @apply inline-flex items-center px-4 py-2 bg-[var(--link-color)] text-[var(--text-color)] rounded hover:bg-[var(--highlight-color)] transition-colors;
+    @apply inline-flex items-center px-4 py-2 bg-var-highlight text-var-text rounded hover:bg-[#1B98E0] hover:text-[#F0F4F8] transition-colors;
   }
 }
 
 @layer utilities {
   .prose {
-    @apply text-[var(--text-color)];
+    @apply text-var-text;
   }
 
   .prose h1, .prose h2, .prose h3, .prose h4 {
-    @apply text-[var(--text-color)];
+    @apply text-var-text;
   }
 
   .prose a {
-    @apply text-[var(--link-color)] hover:text-[var(--highlight-color)];
+    @apply text-var-link hover:text-[#1B98E0];
   }
 
   .prose strong {
-    @apply text-[var(--text-color)];
+    @apply text-var-text;
   }
 
   .prose code {
-    @apply text-[var(--highlight-color)] bg-[var(--highlight-color)]/10;
+    @apply text-[#1B98E0] bg-[#1B98E0]/10;
   }
 
   .prose blockquote {
-    @apply text-[var(--secondary-color)] border-l-[var(--link-color)];
+    @apply text-var-secondary border-l-[#A4161A];
   }
 }
