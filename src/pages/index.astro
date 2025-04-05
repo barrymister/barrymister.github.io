@@ -1,11 +1,11 @@
 ---
+import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 
-const recentPosts = await Astro.glob('../content/posts/*.{md,mdx}').then(posts => {
-  return posts
-    .sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime())
-    .slice(0, 3);
-});
+const posts = await getCollection('posts');
+const recentPosts = posts
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .slice(0, 3);
 ---
 
 <Layout title="Barry Mister - Personal Website">
@@ -23,19 +23,19 @@ const recentPosts = await Astro.glob('../content/posts/*.{md,mdx}').then(posts =
       <div class="space-y-6">
         {recentPosts.map(post => (
           <article class="group">
-            <a href={post.url} class="block">
+            <a href={`/posts/${post.slug}`} class="block">
               <h3 class="text-xl font-semibold group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                {post.frontmatter.title}
+                {post.data.title}
               </h3>
               <time class="text-sm text-gray-600 dark:text-gray-400">
-                {new Date(post.frontmatter.date).toLocaleDateString('en-US', {
+                {new Date(post.data.date).toLocaleDateString('en-US', {
                   year: 'numeric',
                   month: 'long',
                   day: 'numeric'
                 })}
               </time>
-              {post.frontmatter.description && (
-                <p class="mt-2 text-gray-700 dark:text-gray-300">{post.frontmatter.description}</p>
+              {post.data.description && (
+                <p class="mt-2 text-gray-700 dark:text-gray-300">{post.data.description}</p>
               )}
             </a>
           </article>
