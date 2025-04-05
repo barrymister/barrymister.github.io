@@ -1,13 +1,10 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
   push:
     branches: [ main ]
-  # Allow you to run this workflow manually from the Actions tab on GitHub
   workflow_dispatch:
 
-# Allow this job to clone the repo and create a page deployment
 permissions:
   contents: read
   pages: write
@@ -20,30 +17,39 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      dist-path: ${{ steps.build-path.outputs.path }}
     steps:
-      - name: Checkout your repository using git
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm ci
+          npm list astro
 
-      - name: Build with Astro
+      - name: Build site
         run: npm run build
 
-      - name: List build output
-        run: ls -la dist
+      - name: Set build path
+        id: build-path
+        run: echo "path=$(pwd)/dist" >> $GITHUB_OUTPUT
 
-      - name: Upload Pages artifact
+      - name: Show build output
+        run: |
+          echo "Build path: $(pwd)/dist"
+          ls -la "$(pwd)/dist"
+
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
-          name: github-pages
+          path: ${{ steps.build-path.outputs.path }}
 
   deploy:
     needs: build
@@ -55,5 +61,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
-        with:
-          artifact_name: github-pages
