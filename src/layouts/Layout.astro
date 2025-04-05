@@ -19,27 +19,24 @@ const { title } = Astro.props;
 		<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600&display=swap" rel="stylesheet">
 		<style>
 			@import url('../styles/global.css');
-			* {
-				font-family: 'Libre Franklin', sans-serif;
-			}
 		</style>
 		<title>{title}</title>
 	</head>
-	<body class="min-h-screen">
+	<body class="min-h-screen" style="background-color: #003366;">
 		<div class="max-w-3xl mx-auto px-4 py-8">
 			<header class="mb-8">
 				<nav class="flex justify-between items-center">
 					<a href="/" class="text-xl font-semibold" style="color: #FFFFFF;">Barry Mister</a>
 					<div class="space-x-4">
-						<a href="/posts" style="color: #FFFFFF;" class="hover:text-[#003366]">Posts</a>
-						<a href="https://substack.com/@barrymister" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF;" class="hover:text-[#003366]">Substack</a>
+						<a href="/posts" style="color: #FFFFFF;" class="hover:text-[#B22234]">Posts</a>
+						<a href="https://substack.com/@barrymister" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF;" class="hover:text-[#B22234]">Substack</a>
 					</div>
 				</nav>
 			</header>
 			<main>
 				<slot />
 			</main>
-			<footer class="mt-16 py-8 text-center" style="color: #AAB6C3;">
+			<footer class="mt-16 py-8 text-center" style="color: #B0C4DE;">
 				&copy; {new Date().getFullYear()} Barry Mister
 			</footer>
 		</div>

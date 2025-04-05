@@ -4,30 +4,35 @@
 
 @layer base {
   :root {
-    --background-color: #002147;
+    --background-color: #001F3F;
     --text-color: #FFFFFF;
+    --text-muted: #B0C4DE;
     --link-color: #B22234;
-    --highlight-color: #003366;
-    --secondary-color: #AAB6C3;
+    --link-hover: #FFFFFF;
+    --heading-color: #FFFFFF;
   }
 
   body {
-    background-color: #002147;
+    background-color: #001F3F;
     color: #FFFFFF;
   }
 
   h1, h2, h3, h4, h5, h6 {
     color: #FFFFFF;
   }
+
+  .muted {
+    color: #B0C4DE;
+  }
 }
 
 @layer components {
   .article-card {
-    @apply p-6 border border-[#AAB6C3] rounded-lg bg-[#002147] hover:bg-[#002147]/95 transition-colors;
+    @apply p-6 border border-[#B0C4DE] rounded-lg bg-[#001F3F] hover:bg-[#001F3F]/95 transition-colors;
   }
 
   .button {
-    @apply inline-flex items-center px-4 py-2 bg-[#B22234] text-[#FFFFFF] rounded hover:bg-[#003366] hover:text-[#FFFFFF] transition-colors;
+    @apply inline-flex items-center px-4 py-2 bg-[#B22234] text-[#FFFFFF] rounded hover:bg-[#B22234]/90 hover:text-[#FFFFFF] transition-colors;
   }
 }
 
@@ -41,7 +46,7 @@
   }
 
   .prose a {
-    @apply text-[#B22234] hover:text-[#003366];
+    @apply text-[#B22234] hover:text-[#FFFFFF];
   }
 
   .prose strong {
@@ -49,18 +54,18 @@
   }
 
   .prose code {
-    @apply text-[#003366] bg-[#003366]/10;
+    @apply text-[#B22234] bg-[#B22234]/10;
   }
 
   .prose blockquote {
-    @apply text-[#AAB6C3] border-l-[#B22234];
+    @apply text-[#B0C4DE] border-l-[#B22234];
   }
 
   .post-date {
-    @apply text-[#AAB6C3];
+    @apply text-[#B0C4DE];
   }
 
   .footer {
-    @apply text-[#AAB6C3];
+    @apply text-[#B0C4DE];
   }
 }
