@@ -4,54 +4,63 @@
 
 @layer base {
   :root {
-    --background-color: #0D1B2A;
-    --text-color: #F0F4F8;
-    --link-color: #A4161A;
-    --highlight-color: #1B98E0;
-    --secondary-color: #2C3E50;
+    --background-color: #002147;
+    --text-color: #FFFFFF;
+    --link-color: #B22234;
+    --highlight-color: #003366;
+    --secondary-color: #AAB6C3;
   }
 
   body {
-    font-family: 'Libre Franklin', sans-serif;
+    background-color: #002147;
+    color: #FFFFFF;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Merriweather', serif;
+    color: #FFFFFF;
   }
 }
 
 @layer components {
   .article-card {
-    @apply p-6 border border-var-secondary rounded-lg;
+    @apply p-6 border border-[#AAB6C3] rounded-lg bg-[#002147] hover:bg-[#002147]/95 transition-colors;
   }
 
   .button {
-    @apply inline-flex items-center px-4 py-2 bg-var-highlight text-var-text rounded hover:bg-[#1B98E0] hover:text-[#F0F4F8] transition-colors;
+    @apply inline-flex items-center px-4 py-2 bg-[#B22234] text-[#FFFFFF] rounded hover:bg-[#003366] hover:text-[#FFFFFF] transition-colors;
   }
 }
 
 @layer utilities {
   .prose {
-    @apply text-var-text;
+    @apply text-[#FFFFFF];
   }
 
   .prose h1, .prose h2, .prose h3, .prose h4 {
-    @apply text-var-text;
+    @apply text-[#FFFFFF];
   }
 
   .prose a {
-    @apply text-var-link hover:text-[#1B98E0];
+    @apply text-[#B22234] hover:text-[#003366];
   }
 
   .prose strong {
-    @apply text-var-text;
+    @apply text-[#FFFFFF];
   }
 
   .prose code {
-    @apply text-[#1B98E0] bg-[#1B98E0]/10;
+    @apply text-[#003366] bg-[#003366]/10;
   }
 
   .prose blockquote {
-    @apply text-var-secondary border-l-[#A4161A];
+    @apply text-[#AAB6C3] border-l-[#B22234];
+  }
+
+  .post-date {
+    @apply text-[#AAB6C3];
+  }
+
+  .footer {
+    @apply text-[#AAB6C3];
   }
 }

@@ -14,19 +14,7 @@ export default {
             }
           }
         }
-      },
-      backgroundColor: {
-        'var-highlight': 'var(--highlight-color)',
-      },
-      textColor: {
-        'var-text': 'var(--text-color)',
-        'var-link': 'var(--link-color)',
-        'var-secondary': 'var(--secondary-color)',
-      },
-      borderColor: {
-        'var-secondary': 'var(--secondary-color)',
-        'var-link': 'var(--link-color)',
-      },
+      }
     }
   },
   plugins: [

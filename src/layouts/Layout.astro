@@ -16,27 +16,30 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Libre+Franklin:wght@400;600&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600&display=swap" rel="stylesheet">
 		<style>
 			@import url('../styles/global.css');
+			* {
+				font-family: 'Libre Franklin', sans-serif;
+			}
 		</style>
 		<title>{title}</title>
 	</head>
-	<body class="bg-[#0D1B2A] text-[#F0F4F8]">
+	<body class="min-h-screen">
 		<div class="max-w-3xl mx-auto px-4 py-8">
 			<header class="mb-8">
 				<nav class="flex justify-between items-center">
-					<a href="/" class="text-xl font-semibold text-[#F0F4F8]">Barry Mister</a>
+					<a href="/" class="text-xl font-semibold" style="color: #FFFFFF;">Barry Mister</a>
 					<div class="space-x-4">
-						<a href="/posts" class="text-[#F0F4F8] hover:text-[#1B98E0]">Posts</a>
-						<a href="https://substack.com/@barrymister" target="_blank" rel="noopener noreferrer" class="text-[#F0F4F8] hover:text-[#1B98E0]">Substack</a>
+						<a href="/posts" style="color: #FFFFFF;" class="hover:text-[#003366]">Posts</a>
+						<a href="https://substack.com/@barrymister" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF;" class="hover:text-[#003366]">Substack</a>
 					</div>
 				</nav>
 			</header>
 			<main>
 				<slot />
 			</main>
-			<footer class="mt-16 py-8 text-center text-sm">
+			<footer class="mt-16 py-8 text-center" style="color: #AAB6C3;">
 				&copy; {new Date().getFullYear()} Barry Mister
 			</footer>
 		</div>
