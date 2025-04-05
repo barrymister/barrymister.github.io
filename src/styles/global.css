@@ -1,0 +1,114 @@
+/* Global Variables */
+:root {
+  --background-color: #0D1B2A;
+  --text-color: #F0F4F8;
+  --link-color: #A4161A;
+  --highlight-color: #1B98E0;
+  --secondary-color: #2C3E50;
+  --font-heading: 'Merriweather', serif;
+  --font-body: 'Libre Franklin', sans-serif;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--highlight-color);
+}
+
+/* Metadata */
+time, .post-date, small {
+  color: var(--secondary-color);
+}
+
+/* Dark mode overrides for prose content */
+.prose {
+  color: var(--text-color) !important;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  color: var(--text-color) !important;
+}
+
+.prose a {
+  color: var(--link-color) !important;
+}
+
+.prose a:hover {
+  color: var(--highlight-color) !important;
+}
+
+.prose strong {
+  color: var(--text-color) !important;
+}
+
+.prose code {
+  color: var(--highlight-color) !important;
+  background-color: rgba(27, 152, 224, 0.1) !important;
+}
+
+.prose blockquote {
+  color: var(--secondary-color) !important;
+  border-left-color: var(--link-color) !important;
+}
+
+/* Container styles */
+.container {
+  max-width: 65ch;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Navigation */
+nav {
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+/* Article cards */
+.article-card {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--link-color);
+  color: var(--text-color);
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: var(--highlight-color);
+  color: var(--text-color);
+}

@@ -7,16 +7,17 @@ const sortedPosts = posts.sort((a, b) => new Date(b.data.date).getTime() - new D
 ---
 
 <Layout title="Posts - Barry Mister">
-  <section>
-    <h1 class="text-4xl font-bold mb-8">Posts</h1>
+  <div class="prose">
+    <h1>Posts</h1>
+
     <div class="space-y-8">
       {sortedPosts.map(post => (
-        <article class="group">
-          <a href={`/posts/${post.slug}`} class="block">
-            <h2 class="text-2xl font-semibold group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+        <article class="article-card">
+          <a href={`/posts/${post.slug}`}>
+            <h2>
               {post.data.title}
             </h2>
-            <time class="text-sm text-gray-600 dark:text-gray-400">
+            <time>
               {new Date(post.data.date).toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
@@ -24,11 +25,11 @@ const sortedPosts = posts.sort((a, b) => new Date(b.data.date).getTime() - new D
               })}
             </time>
             {post.data.description && (
-              <p class="mt-2 text-gray-700 dark:text-gray-300">{post.data.description}</p>
+              <p class="mt-2">{post.data.description}</p>
             )}
           </a>
         </article>
       ))}
     </div>
-  </section>
+  </div>
 </Layout>
