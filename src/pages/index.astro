@@ -9,10 +9,10 @@ const recentPosts = posts
 ---
 
 <Layout title="Barry Mister - Personal Website">
-  <section>
-    <div class="prose">
-      <h1>Welcome</h1>
-      <p>
+  <section class="space-y-8">
+    <div class="prose prose-lg max-w-none">
+      <h1 class="text-4xl font-bold mb-4">Welcome</h1>
+      <p class="text-xl">
         Hi, I'm Barry. This is my personal corner of the internet where I occasionally share thoughts and updates.
         For more frequent content, check out my <a href="https://substack.com/@barrymister" target="_blank" rel="noopener noreferrer">Substack</a>.
       </p>
@@ -22,12 +22,12 @@ const recentPosts = posts
       <h2>Recent Posts</h2>
       <div class="space-y-6">
         {recentPosts.map(post => (
-          <article class="article-card">
-            <a href={`/posts/${post.slug}`}>
-              <h3>
+          <article class="article-card hover:transform hover:-translate-y-1 transition-transform duration-200">
+            <a href={`/posts/${post.slug}`} class="block">
+              <h3 class="text-xl font-semibold mb-2">
                 {post.data.title}
               </h3>
-              <time>
+              <time class="text-sm">
                 {new Date(post.data.date).toLocaleDateString('en-US', {
                   year: 'numeric',
                   month: 'long',

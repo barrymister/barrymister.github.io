@@ -17,13 +17,14 @@ const { title } = Astro.props;
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Libre+Franklin:wght@400;600&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="/src/styles/global.css" />
+		<!-- Global styles -->
+		<link rel="stylesheet" href="../styles/global.css" />
 		<title>{title}</title>
 	</head>
-	<body>
-		<div class="container">
-			<header>
-				<nav>
+	<body class="min-h-screen">
+		<div class="container max-w-3xl mx-auto px-4 py-8">
+			<header class="mb-8">
+				<nav class="flex justify-between items-center">
 					<a href="/" class="text-xl font-semibold">Barry Mister</a>
 					<div class="space-x-4">
 						<a href="/posts">Posts</a>
