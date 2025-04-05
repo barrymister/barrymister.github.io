@@ -16,21 +16,44 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '18'
           cache: npm
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm ci
+          npm list
+
       - name: Build with Astro
-        run: npm run build
+        run: |
+          npm run build
+          ls -la
+          pwd
+          echo "Contents of dist directory:"
+          ls -la dist/
+
+      - name: Create artifact
+        run: |
+          cd dist
+          tar czf ../artifact.tar.gz .
+          cd ..
+          ls -la artifact.tar.gz
+
       - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-pages
+          path: artifact.tar.gz
+
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: dist
+          retention-days: 1
 
   deploy:
     environment:
