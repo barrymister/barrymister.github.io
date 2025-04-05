@@ -1,0 +1,34 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const posts = await Astro.glob('../../content/posts/*.{md,mdx}').then(posts => {
+  return posts.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
+});
+---
+
+<Layout title="Posts - Barry Mister">
+  <section>
+    <h1 class="text-4xl font-bold mb-8">Posts</h1>
+    <div class="space-y-8">
+      {posts.map(post => (
+        <article class="group">
+          <a href={post.url} class="block">
+            <h2 class="text-2xl font-semibold group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+              {post.frontmatter.title}
+            </h2>
+            <time class="text-sm text-gray-600 dark:text-gray-400">
+              {new Date(post.frontmatter.date).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+              })}
+            </time>
+            {post.frontmatter.description && (
+              <p class="mt-2 text-gray-700 dark:text-gray-300">{post.frontmatter.description}</p>
+            )}
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+</Layout>
