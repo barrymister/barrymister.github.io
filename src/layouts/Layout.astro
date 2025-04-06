@@ -6,39 +6,73 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Barry Mister's Personal Website" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/ico" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600&display=swap" rel="stylesheet">
-		<style>
-			@import url('../styles/global.css');
-		</style>
-		<title>{title}</title>
-	</head>
-	<body class="min-h-screen" style="background-color: #003366;">
-		<div class="max-w-3xl mx-auto px-4 py-8">
-			<header class="mb-8">
-				<nav class="flex justify-between items-center">
-					<a href="/" class="text-xl font-semibold" style="color: #FFFFFF;">Barry Mister</a>
-					<div class="space-x-4">
-						<a href="/posts" style="color: #FFFFFF;" class="hover:text-[#B22234]">Posts</a>
-						<a href="https://substack.com/@barrymister" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF;" class="hover:text-[#B22234]">Substack</a>
-					</div>
-				</nav>
-			</header>
-			<main>
-				<slot />
-			</main>
-			<footer class="mt-16 py-8 text-center" style="color: #B0C4DE;">
-				&copy; {new Date().getFullYear()} Barry Mister
-			</footer>
-		</div>
-	</body>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="description" content="Barry Mister's Personal Website" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" type="image/ico" href="/favicon.ico" />
+	<meta name="generator" content={Astro.generator} />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Franklin+Gothic+Medium&display=swap" rel="stylesheet">
+	<title>{title}</title>
+</head>
+<body class="min-h-screen font-sans flex items-center justify-center p-4 bg-translucent">
+	<div class="max-w-3xl w-full mx-auto bg-translucent p-8 rounded-lg shadow-xl text-text">
+		<header class="mb-8">
+			<nav class="flex justify-between items-center">
+				<a href="/" class="text-xl font-semibold text-primary">Barry Mister</a>
+				<div class="space-x-4">
+					<a href="/posts" class="nav-link">Posts</a>
+					<a href="https://substack.com/@barrymister" target="_blank" rel="noopener noreferrer" class="nav-link">Substack</a>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<slot />
+		</main>
+		<footer class="mt-16 py-8 text-center text-antique-white border-t border-antique-white/20">
+			&copy; {new Date().getFullYear()} Barry Mister
+		</footer>
+	</div>
+</body>
 </html>
+<style is:global>
+	body {
+		background-color: #003566; /* Light Blue background */
+		color: #f5cc00; /* Yellow text */
+	}
+
+	a {
+		color: #cca000; /* Gold */
+		text-decoration: none;
+		transition: color 0.2s ease-in-out;
+	}
+
+	a:hover {
+		color: #000814; /* Dark Blue on hover */
+		text-decoration: underline;
+	}
+
+	a:visited {
+		color: #cca000; /* Gold */
+	}
+
+	a:active {
+		color: #000814; /* Dark Blue on active */
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: #000814; /* Dark Blue for headings */
+	}
+
+	.nav-link {
+		color: #cca000 !important; /* Gold */
+	}
+
+	.nav-link:hover {
+		color: #000814 !important; /* Dark Blue on hover */
+	}
+</style>

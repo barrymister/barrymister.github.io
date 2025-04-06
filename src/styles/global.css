@@ -2,70 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background-color: #001F3F;
-    --text-color: #FFFFFF;
-    --text-muted: #B0C4DE;
-    --link-color: #B22234;
-    --link-hover: #FFFFFF;
-    --heading-color: #FFFFFF;
-  }
-
-  body {
-    background-color: #001F3F;
-    color: #FFFFFF;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    color: #FFFFFF;
-  }
-
-  .muted {
-    color: #B0C4DE;
-  }
-}
-
 @layer components {
   .article-card {
-    @apply p-6 border border-[#B0C4DE] rounded-lg bg-[#001F3F] hover:bg-[#001F3F]/95 transition-colors;
+    @apply p-6 border border-antique-white rounded-lg bg-navy-blue/95 hover:bg-navy-blue/90 transition-colors;
   }
 
   .button {
-    @apply inline-flex items-center px-4 py-2 bg-[#B22234] text-[#FFFFFF] rounded hover:bg-[#B22234]/90 hover:text-[#FFFFFF] transition-colors;
+    @apply inline-flex items-center px-4 py-2 bg-antique-white text-navy-blue rounded hover:bg-hover-antique hover:text-navy-blue transition-colors;
   }
 }
 
 @layer utilities {
   .prose {
-    @apply text-[#FFFFFF];
+    /* Color is handled by tailwind.config.mjs typography settings */
   }
 
   .prose h1, .prose h2, .prose h3, .prose h4 {
-    @apply text-[#FFFFFF];
+    /* Color is handled by tailwind.config.mjs typography settings */
   }
 
   .prose a {
-    @apply text-[#B22234] hover:text-[#FFFFFF];
+    /* Color is handled by tailwind.config.mjs typography settings */
+    /* Hover is handled by Layout.astro global a:hover */
   }
 
   .prose strong {
-    @apply text-[#FFFFFF];
+    /* Color is handled by tailwind.config.mjs typography settings */
   }
 
   .prose code {
-    @apply text-[#B22234] bg-[#B22234]/10;
+    @apply bg-antique-white/10; /* Keep background, remove text color */
+    /* Color is handled by tailwind.config.mjs typography settings */
   }
 
   .prose blockquote {
-    @apply text-[#B0C4DE] border-l-[#B22234];
+    @apply border-l-antique-white; /* Keep border color, remove text color */
+    /* Color is handled by tailwind.config.mjs typography settings */
   }
 
   .post-date {
-    @apply text-[#B0C4DE];
+    /* Use default text color */
   }
 
   .footer {
-    @apply text-[#B0C4DE];
+    /* Use default text color */
   }
 }
